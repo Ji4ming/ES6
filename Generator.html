@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <p id="test1"> Hello World! </p>
+
+<script>
+    let test1 = function* (a ,b){
+        let sum1 = a + b;
+        document.getElementById("test1").innerHTML = sum1;
+        yield console.log(sum1);
+
+        let sum2 = sum1 * 2;
+        yield console.log(sum2);
+
+        let sum3 = sum2 * 2;
+        yield console.log(sum3);
+    };
+
+    let x = test1(2, 4);
+    x.next();
+    x.next();
+    x.next();
+
+
+</script>
+
+</body>
+</html>
